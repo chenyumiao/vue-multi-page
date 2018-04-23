@@ -1,6 +1,6 @@
 # vue2.*  (多页面跳转)
 
- @[vue2.3.3|webpack2.6.1|less|axios]
+ @[vue2.3.3|webpack2.6.1|scss|axios]
 
 >- 以前看过有相关朋友share了空的多页面脚手架. 不过down了几个都是webpack1.0或者vue1.0的.
 >- 刚好项目需要用到vue. 就在vue-cli的基础上进行了修改
