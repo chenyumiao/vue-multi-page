@@ -23,7 +23,7 @@
 2. src: 页面文件
 3. (src)assets: 
 - js公用的方法/配置方法
-- less公用的样式和reset.css
+- scss公用的样式和base.scss
 - lib.js页面引用的入口
 4. (src)components: 复用的组件
 5. (src)module: **相关的页面** (每个文件夹表示一个页面)
@@ -34,32 +34,3 @@
 
 ---
 
-##其他
-- 在assets/conf.js中配置了axios请求拦截.已经全局引入axios(使用this.$axios进行请求)
-有需要的话.具体的配置请到conf.js中进行增加
-- 端口号在config/index.js中修改;
-- 还有另外一个开发过程中需要挂代理:
-请到config文件夹中的 index.js中 proxyTable进行修改
-具体请参考此 [github链接](https://github.com/chimurai/http-proxy-middleware)
-``` javascript
-/*
-param:
-*:   表示挂代理时,识别的请求前缀
-url: 表示代理的地址
-*/
-'/*': {
-	target: 'url',
-	changeOrigin: true,
-	pathRewrite: {
-		'^/*': '/*'
-	}
-}
-```
-- package.json中是各种模块依赖包 版本号前面的 ^1.2.2是表示当你install时, 会去检验是否有 1.*.*的新版本(>=1.2.2)
-~1.2.2是表示当你install时, 会去检验是否有1.2.*的新版本(>=1.2.2)
-- 在配置文件中增加了各个配置项的注释.大家一起学习.
-
----
-- 本人也还正在学习中,其中有部分vue-cli生成的语句暂时还不太明白,希望能帮到有需要的或者不给大家挖坑.互相学习
-- webpack已经更新到3.*了........... 吐血 - -
----
